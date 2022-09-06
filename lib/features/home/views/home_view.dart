@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sustain/features/introduction/views/introduction_view.dart';
 import 'package:sustain/features/onboarding/views/onboarding_view.dart';
-import 'package:sustain/features/questionnaire/views/questionnaire_view.dart';
+import 'package:sustain/features/questionnaire/features/all_questions/views/all_questions_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -83,7 +83,7 @@ class HomeView extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const QuestionnaireView(),
+                    builder: (context) => const AllQuestions(),
                   ),
                 );
               },
