@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sustain/common/app/views/bottom_navigation_bar.dart';
 import 'package:sustain/common/utils/media_query.dart';
+import 'package:sustain/features/questionnaire/features/all_questions/views/all_questions_view.dart';
 
 class IntroductionView extends StatelessWidget {
   const IntroductionView({super.key});
@@ -63,7 +63,7 @@ class IntroductionView extends StatelessWidget {
                             ),
                             // const SizedBox(height: 50),
                             Text(
-                              'To get you up and running , we\'ll start with three simple questions to calculate your carbon footprint from travel and food choices!',
+                              'To get you up and running , we\'ll start with six simple questions to calculate your carbon footprint from travel and food choices!',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
                             // const SizedBox(height: 50),
@@ -83,7 +83,7 @@ class IntroductionView extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (BuildContext context) =>
-                                            const BottomNav()));
+                                            const AllQuestions()));
                               },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:sustain/features/carbon_estimate/views/carbon_estimate_view.dart';
 import 'package:sustain/features/questionnaire/features/flights/views/flights_view.dart';
 import 'package:sustain/features/questionnaire/features/food/views/food_view.dart';
 import 'package:sustain/features/questionnaire/features/house_rooms/views/house_rooms_view.dart';
@@ -19,7 +20,10 @@ class _AllQuestionsState extends State<AllQuestions> {
 
   // when you press get started this runs.
   void _onIntroEnd(context) {
-    Navigator.of(context).pop();
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (BuildContext context) => const CarbonEstimateView()));
   }
 
   @override

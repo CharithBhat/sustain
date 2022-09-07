@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sustain/features/carbon_estimate/views/carbon_estimate_view.dart';
 import 'package:sustain/features/introduction/views/introduction_view.dart';
 import 'package:sustain/features/onboarding/views/onboarding_view.dart';
 import 'package:sustain/features/questionnaire/features/all_questions/views/all_questions_view.dart';
@@ -89,6 +90,31 @@ class HomeView extends StatelessWidget {
               },
               child: Text(
                 'Go to questionnaire',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText2!
+                    .copyWith(color: Colors.white),
+              ),
+            ),
+            const SizedBox(height: 50),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Theme.of(context).primaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8), // <-- Radius
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CarbonEstimateView(),
+                  ),
+                );
+              },
+              child: Text(
+                'Go to carbon estimate',
                 style: Theme.of(context)
                     .textTheme
                     .bodyText2!
